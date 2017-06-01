@@ -27,7 +27,7 @@ class User < ApplicationRecord
   
    def have(item)
     self.haves.find_or_create_by(item_id: item.id)
-  end
+   end
 
   def unhave(item)
     have = self.haves.find_by(item_id: item.id)

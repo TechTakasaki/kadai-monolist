@@ -1,4 +1,5 @@
 class OwnershipsController < ApplicationController
+  before_action :require_user_logged_in
   def create
     @item = Item.find_or_initialize_by(code: params[:item_code])
 
